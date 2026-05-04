@@ -571,7 +571,7 @@ const MODEL_GROUPS = [
     { id:'openrouter/auto', name:'Auto Router', desc:'Melhor modelo para cada prompt', badge:'think' },
     { id:'openrouter/free', name:'Free Router', desc:'Modelos gratuitos disponíveis', badge:'free' },
   ]},
-  { group:'🟢 OpenAI / GPT', models:[
+  { group:'OpenAI', models:[
     { id:'openai/gpt-5.2', name:'GPT-5.2', desc:'Mais recente OpenAI 2026', badge:'new' },
     { id:'openai/gpt-5.1', name:'GPT-5.1', desc:'Frontier-grade, reasoning adaptivo', badge:'new' },
     { id:'openai/gpt-5', name:'GPT-5', desc:'Frontier OpenAI flagship', badge:'new' },
@@ -584,14 +584,14 @@ const MODEL_GROUPS = [
     { id:'openai/gpt-oss-20b', name:'GPT OSS 20B', desc:'Open-weight 20B Apache 2.0', badge:'free' },
     { id:'openai/gpt-4o-search-preview', name:'GPT-4o Search', desc:'Busca web integrada' },
   ]},
-  { group:'🟠 Anthropic / Claude', models:[
+  { group:'Anthropic', models:[
     { id:'anthropic/claude-opus-4.6-fast', name:'Claude Opus 4.6 Fast', desc:'Claude mais avançado 2025', badge:'new' },
     { id:'anthropic/claude-opus-4.1', name:'Claude Opus 4.1', desc:'Máximo poder Anthropic', badge:'new' },
     { id:'anthropic/claude-3.7-sonnet', name:'Claude 3.7 Sonnet', desc:'Equilibrado e inteligente', badge:'think' },
     { id:'anthropic/claude-3.7-sonnet:thinking', name:'Claude 3.7 Sonnet Thinking', desc:'Modo raciocínio ativado', badge:'think' },
     { id:'anthropic/claude-3.5-haiku', name:'Claude 3.5 Haiku', desc:'Rápido e eficiente', badge:'fast' },
   ]},
-  { group:'🔵 Google / Gemini', models:[
+  { group:'Google', models:[
     { id:'google/gemini-3.1-flash-lite-preview', name:'Gemini 3.1 Flash Lite', desc:'O mais rápido Google 2026', badge:'new' },
     { id:'google/gemini-3-flash-preview', name:'Gemini 3 Flash', desc:'Gemini 3 generation', badge:'new' },
     { id:'google/gemini-2.5-pro-preview', name:'Gemini 2.5 Pro', desc:'Líder em benchmarks, 1M ctx' },
@@ -603,7 +603,7 @@ const MODEL_GROUPS = [
     { id:'google/gemma-4-27b-it', name:'Gemma 4 27B (MoE)', desc:'Instruction-tuned multimodal', badge:'new' },
     { id:'google/gemini-2.5-flash-image', name:'Nano Banana (Image)', desc:'Geração de imagens Gemini' },
   ]},
-  { group:'🟡 xAI / Grok', models:[
+  { group:'xAI', models:[
     { id:'x-ai/grok-4', name:'Grok 4', desc:'Flagship xAI mais recente', badge:'new' },
     { id:'x-ai/grok-4-fast', name:'Grok 4 Fast', desc:'Alta velocidade', badge:'fast' },
     { id:'x-ai/grok-3', name:'Grok 3', desc:'Modelo principal xAI' },
@@ -611,7 +611,7 @@ const MODEL_GROUPS = [
     { id:'x-ai/grok-3-mini:thinking', name:'Grok 3 Mini Thinking', desc:'Raciocínio ativado', badge:'think' },
     { id:'x-ai/grok-code-fast-1', name:'Grok Code Fast 1', desc:'Especializado em código', badge:'think' },
   ]},
-  { group:'🔴 DeepSeek', models:[
+  { group:'DeepSeek', models:[
     { id:'deepseek/deepseek-r1', name:'DeepSeek R1', desc:'Raciocínio de ponta', badge:'think' },
     { id:'deepseek/deepseek-r1:free', name:'DeepSeek R1 Free', desc:'Raciocínio gratuito', badge:'free' },
     { id:'deepseek/deepseek-r1-distill-qwen-32b', name:'R1 Distill Qwen 32B', desc:'Distilado eficiente', badge:'think' },
@@ -620,7 +620,7 @@ const MODEL_GROUPS = [
     { id:'deepseek/deepseek-v3-2', name:'DeepSeek V3.2', desc:'Versão melhorada', badge:'new' },
     { id:'deepseek/deepseek-prover-v2', name:'DeepSeek Prover V2', desc:'Especializado em matemática', badge:'think' },
   ]},
-  { group:'🟤 Meta / Llama', models:[
+  { group:'Meta', models:[
     { id:'meta-llama/llama-4-maverick', name:'Llama 4 Maverick', desc:'Top-tier multimodal Meta', badge:'new' },
     { id:'meta-llama/llama-4-scout', name:'Llama 4 Scout', desc:'10M ctx, multimodal', badge:'new' },
     { id:'meta-llama/llama-3.3-70b-instruct', name:'Llama 3.3 70B', desc:'Poderoso e versátil' },
@@ -628,7 +628,7 @@ const MODEL_GROUPS = [
     { id:'meta-llama/llama-3.1-405b-instruct', name:'Llama 3.1 405B', desc:'Maior modelo Meta' },
     { id:'meta-llama/llama-3.1-8b-instruct:free', name:'Llama 3.1 8B Free', desc:'Rápido e gratuito', badge:'free' },
   ]},
-  { group:'🟣 Alibaba / Qwen', models:[
+  { group:'Alibaba', models:[
     { id:'qwen/qwen3-235b-a22b', name:'Qwen3 235B', desc:'Maior Qwen3 com thinking', badge:'think' },
     { id:'qwen/qwen3-30b-a3b', name:'Qwen3 30B MoE', desc:'MoE eficiente', badge:'fast' },
     { id:'qwen/qwen3-32b', name:'Qwen3 32B', desc:'Multilingual, thinking flexível', badge:'think' },
@@ -638,7 +638,7 @@ const MODEL_GROUPS = [
     { id:'qwen/qwq-32b', name:'QwQ 32B', desc:'Reasoning especializado', badge:'think' },
     { id:'qwen/qwq-32b:free', name:'QwQ 32B Free', desc:'Reasoning gratuito', badge:'free' },
   ]},
-  { group:'⚪ Mistral / Mixtral', models:[
+  { group:'Mistral', models:[
     { id:'mistralai/mistral-large', name:'Mistral Large', desc:'Flagship Mistral' },
     { id:'mistralai/mistral-small-3.1-24b-instruct', name:'Mistral Small 3.1', desc:'Eficiente e capaz', badge:'free' },
     { id:'mistralai/mistral-nemo', name:'Mistral Nemo', desc:'Compacto multilingual', badge:'free' },
@@ -647,57 +647,57 @@ const MODEL_GROUPS = [
     { id:'mistralai/devstral-small', name:'Devstral Small', desc:'Agente de código', badge:'free' },
     { id:'mistralai/pixtral-large-2411', name:'Pixtral Large', desc:'Multimodal Mistral' },
   ]},
-  { group:'🌙 Moonshot / Kimi', models:[
+  { group:'Moonshot', models:[
     { id:'moonshotai/kimi-k2', name:'Kimi K2', desc:'Open-source 1T params, agentic', badge:'new' },
     { id:'moonshotai/kimi-k2:free', name:'Kimi K2 Free', desc:'Gratuito', badge:'free' },
     { id:'moonshotai/kimi-vl-a3b-thinking', name:'Kimi VL Thinking', desc:'Vision + reasoning', badge:'think' },
     { id:'moonshotai/moonlight-16b-a3b-instruct', name:'Moonlight 16B', desc:'Eficiente MoE', badge:'free' },
   ]},
-  { group:'🐉 Tencent / Hunyuan (Hy3)', models:[
+  { group:'Tencent (Hy3)', models:[
     { id:'tencent/hunyuan-a13b-instruct', name:'Hy3 A13B', desc:'MoE Tencent eficiente', badge:'new' },
     { id:'tencent/hunyuan-a13b-instruct:free', name:'Hy3 A13B Free', desc:'Gratuito', badge:'free' },
     { id:'tencent/hunyuan-turbos-20250313', name:'Hunyuan Turbo S', desc:'Alta velocidade Tencent', badge:'fast' },
     { id:'tencent/hunyuan-t1', name:'Hunyuan T1', desc:'Thinking model', badge:'think' },
   ]},
-  { group:'🟦 Baidu / ERNIE', models:[
+  { group:'Baidu', models:[
     { id:'baidu/ernie-4.5-300b-a47b', name:'ERNIE 4.5 300B', desc:'Flagship MoE Baidu', badge:'new' },
     { id:'baidu/ernie-4.5-21b-a3b', name:'ERNIE 4.5 21B', desc:'Econômico', badge:'free' },
     { id:'baidu/ernie-4.5-21b-a3b-thinking', name:'ERNIE 4.5 Thinking', desc:'Com raciocínio', badge:'think' },
     { id:'baidu/ernie-4.5-vl-28b-a3b', name:'ERNIE 4.5 VL 28B', desc:'Vision-language' },
     { id:'baidu/ernie-4.5-vl-424b-a47b', name:'ERNIE 4.5 VL 424B', desc:'Vision MoE gigante' },
   ]},
-  { group:'🟩 NVIDIA / Nemotron', models:[
+  { group:'NVIDIA', models:[
     { id:'nvidia/llama-3.1-nemotron-ultra-253b-v1', name:'Nemotron Ultra 253B', desc:'Flaghship NVIDIA reasoning', badge:'think' },
     { id:'nvidia/llama-3.1-nemotron-70b-instruct', name:'Nemotron 70B', desc:'NVIDIA otimizado' },
     { id:'nvidia/llama-3.3-nemotron-super-49b-v1', name:'Nemotron Super 49B', desc:'Open-weight NVIDIA', badge:'free' },
   ]},
-  { group:'🔶 Amazon / Nova', models:[
+  { group:'Amazon', models:[
     { id:'amazon/nova-premier-v1', name:'Nova Premier', desc:'Flagship Amazon' },
     { id:'amazon/nova-pro-v1', name:'Nova Pro', desc:'Alto desempenho' },
     { id:'amazon/nova-lite-v1', name:'Nova Lite', desc:'Rápido e econômico', badge:'fast' },
     { id:'amazon/nova-micro-v1', name:'Nova Micro', desc:'Ultra leve', badge:'fast' },
     { id:'amazon/nova-2-lite-v1', name:'Nova 2 Lite', desc:'Mais recente', badge:'new' },
   ]},
-  { group:'⚡ ByteDance / Seed', models:[
+  { group:'ByteDance', models:[
     { id:'bytedance-seed/seed-1.6', name:'Seed 1.6', desc:'Flagship ByteDance', badge:'new' },
     { id:'bytedance-seed/seed-1.6-flash', name:'Seed 1.6 Flash', desc:'Versão rápida', badge:'fast' },
     { id:'bytedance-seed/seed-2.0-mini', name:'Seed 2.0 Mini', desc:'Compacto', badge:'new' },
   ]},
-  { group:'🧠 Arcee / Trinity', models:[
+  { group:'Arcee', models:[
     { id:'arcee-ai/trinity-large-thinking', name:'Trinity Large Thinking', desc:'Reasoning avançado', badge:'think' },
     { id:'arcee-ai/trinity-large-preview:free', name:'Trinity Large Free', desc:'Preview gratuito', badge:'free' },
     { id:'arcee-ai/trinity-mini', name:'Trinity Mini', desc:'Compacto e rápido', badge:'fast' },
     { id:'arcee-ai/maestro-reasoning', name:'Maestro Reasoning', desc:'Raciocínio Arcee', badge:'think' },
     { id:'arcee-ai/virtuoso-large', name:'Virtuoso Large', desc:'Modelo premium' },
   ]},
-  { group:'🎯 Perplexity', models:[
+  { group:'Perplexity', models:[
     { id:'perplexity/sonar-pro', name:'Sonar Pro', desc:'Busca web profissional' },
     { id:'perplexity/sonar', name:'Sonar', desc:'Busca web rápida', badge:'fast' },
     { id:'perplexity/sonar-reasoning-pro', name:'Sonar Reasoning Pro', desc:'Raciocínio + busca', badge:'think' },
     { id:'perplexity/sonar-deep-research', name:'Sonar Deep Research', desc:'Pesquisa profunda', badge:'think' },
     { id:'perplexity/r1-1776', name:'R1-1776', desc:'Sem censura de localização' },
   ]},
-  { group:'🔷 Microsoft / Phi', models:[
+  { group:'Microsoft', models:[
     { id:'microsoft/phi-4', name:'Phi-4', desc:'SLM avançado da Microsoft' },
     { id:'microsoft/phi-4-reasoning', name:'Phi-4 Reasoning', desc:'Com raciocínio', badge:'think' },
     { id:'microsoft/phi-4-reasoning-plus', name:'Phi-4 Reasoning+', desc:'Máximo raciocínio', badge:'think' },
@@ -705,24 +705,24 @@ const MODEL_GROUPS = [
     { id:'microsoft/mai-ds-r1', name:'MAI DS R1', desc:'Microsoft + DeepSeek', badge:'think' },
     { id:'microsoft/wizardlm-2-8x22b', name:'WizardLM 2 8x22B', desc:'MoE poderoso' },
   ]},
-  { group:'🌐 Cohere / Command', models:[
+  { group:'Cohere', models:[
     { id:'cohere/command-r-plus', name:'Command R+', desc:'Multilingual avançado' },
     { id:'cohere/command-r7b-12-2024', name:'Command R7B', desc:'Eficiente e rápido', badge:'fast' },
     { id:'cohere/command-a-03-2025', name:'Command-A', desc:'Agente de produção' },
   ]},
-  { group:'🌸 Xiaomi / MiMo', models:[
+  { group:'Xiaomi', models:[
     { id:'xiaomi/mimo-vl-7b-rl', name:'MiMo VL 7B RL', desc:'Vision-language Xiaomi', badge:'new' },
   ]},
-  { group:'🧩 Z.AI / GLM', models:[
+  { group:'Z.AI', models:[
     { id:'z-ai/glm-4.5-flash', name:'GLM 4.5 Flash', desc:'Rápido Zhipu AI', badge:'fast' },
     { id:'z-ai/glm-4.5', name:'GLM 4.5', desc:'Flagship Z.AI', badge:'new' },
   ]},
-  { group:'🔹 MiniMax', models:[
+  { group:'MiniMax', models:[
     { id:'minimax/minimax-m1', name:'MiniMax M1', desc:'Agente de produção 1M ctx', badge:'new' },
     { id:'minimax/minimax-m2.5', name:'MiniMax M2.5', desc:'Office work avançado', badge:'new' },
     { id:'minimax/minimax-01', name:'MiniMax-01', desc:'Lightning fast', badge:'fast' },
   ]},
-  { group:'🔑 Outros modelos notáveis', models:[
+  { group:'Outros modelos notáveis', models:[
     { id:'allenai/olmo-3.1-32b-instruct', name:'OLMo 3.1 32B', desc:'AllenAI open research', badge:'free' },
     { id:'ai21/jamba-large-1.7', name:'Jamba Large 1.7', desc:'SSM+Transformer AI21' },
     { id:'aion-labs/aion-2.0', name:'Aion 2.0', desc:'Modelo de raciocínio', badge:'think' },
