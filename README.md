@@ -1,5 +1,4 @@
 <p align="center">
-  <img src="assets/images/logo.png" alt="Maya AI Logo" width="128" height="128">
 </p>
 
 <h1 align="center">Nexgate</h1>
