@@ -2,7 +2,7 @@
   <img src="assets/images/logo.png" alt="Maya AI Logo" width="128" height="128">
 </p>
 
-<h1 align="center">Maya AI</h1>
+<h1 align="center">Nexgate</h1>
 
 <p align="center">
   <img src="https://img.shields.shields.shields.shields.io/github/license/Joudacasa/Maya-AI?style=flat-square&color=5319e7" alt="License">
@@ -19,7 +19,7 @@
 
 ## 🚀 Overview
 
-Maya AI is a multimodal AI suite designed to simplify and accelerate the creative process. It integrates state-of-the-art text-to-image, music generation, and advanced coding assistance into a single, cohesive, and lightweight web interface.
+NexGate is a multimodal AI suite designed to simplify and accelerate the creative process. It integrates state-of-the-art text-to-image, music generation, and advanced coding assistance into a single, cohesive, and lightweight web interface.
 
 Built for developers, artists, and creators, Maya provides a seamless, "local-first" experience where modular configuration meets high-performance inference.
 
@@ -41,21 +41,11 @@ Built for developers, artists, and creators, Maya provides a seamless, "local-fi
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Joudacasa/Maya-AI.git](https://github.com/Joudacasa/Maya-AI.git)
-    cd Maya-AI
+    git clone [https://github.com/Joudacasa/NexGate.git](https://github.com/Joudacasa/Nexgate.git)
+    cd Nexgate
     ```
 
-2.  **Configure your API Keys:**
-    -   Create a new file named `config.js` in the root directory.
-    -   Add your keys using the following structure:
-        ```javascript
-        export const HARDCODED_KEYS = {
-            groq: 'your_groq_key_here',
-        };
-        ```
-    -   *Maya will automatically load these keys when running locally.*
-
-3.  **Run the project:**
+2.  **Run the project:**
     -   We recommend using the **Live Server** extension in VS Code. Right-click on `index.html` and select "Open with Live Server".
     -   Alternatively, use any local HTTP server (e.g., `python -m http.server 8000`).
 
