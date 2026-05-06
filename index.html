@@ -371,7 +371,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);dis
 <!-- TOKEN LIMIT MODAL -->
 <div id="tok-overlay" class="hidden">
   <div class="tok-card">
-    <div class="tok-icon">⚡</div>
+    <div class="tok-icon"></div>
     <div class="tok-title">Limite de tokens atingido</div>
     <div class="tok-sub">Você usou todos os tokens desta sessão. Aguarde o reset automático para continuar ou atualize seu plano.</div>
     <div class="tok-timer" id="tok-timer">60:00</div>
@@ -541,10 +541,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);dis
 <div id="sb-backdrop" onclick="toggleSB()"></div>
 
 <script>
-// ═══════════════════════════════════════
-// API KEY — hardcoded, never shown in UI
-// ═══════════════════════════════════════
-const OR_KEY = 'sk-or-v1-COLOQUE_SUA_CHAVE_AQUI';
+const OR_KEY = ' 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';
 const OR_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
 // ═══════════════════════════════════════
@@ -556,7 +553,7 @@ const MODEL_GROUPS = [
     { id:'openrouter/optimus-alpha', name:'Optimus Alpha', desc:'Frontier cloaked', badge:'new' },
     { id:'openrouter/quasar-alpha', name:'Quasar Alpha', desc:'Long context cloaked', badge:'new' },
   ]},
-  { label:'🟢 OpenAI / GPT', color:'#10a37f', models:[
+  { label:'OpenAI', color:'#10a37f', models:[
     { id:'openai/gpt-4.5-preview', name:'GPT-4.5 Preview', desc:'OpenAI preview mais recente', badge:'new' },
     { id:'openai/gpt-4o', name:'GPT-4o', desc:'Multimodal flagship', badge:'' },
     { id:'openai/gpt-4o-mini', name:'GPT-4o Mini', desc:'Rápido e eficiente', badge:'fast' },
@@ -568,7 +565,7 @@ const MODEL_GROUPS = [
     { id:'openai/o4-mini', name:'o4 Mini', desc:'Última geração OpenAI', badge:'new' },
     { id:'openai/gpt-4o-search-preview', name:'GPT-4o Search', desc:'Com busca web integrada', badge:'' },
   ]},
-  { label:'🟠 Anthropic / Claude', color:'#d97757', models:[
+  { label:'Anthropic', color:'#d97757', models:[
     { id:'anthropic/claude-opus-4', name:'Claude Opus 4', desc:'Mais poderoso Anthropic 2025', badge:'new' },
     { id:'anthropic/claude-sonnet-4-5', name:'Claude Sonnet 4.5', desc:'Equilibrado e inteligente', badge:'new' },
     { id:'anthropic/claude-3.7-sonnet', name:'Claude 3.7 Sonnet', desc:'Raciocínio híbrido', badge:'think' },
@@ -578,7 +575,7 @@ const MODEL_GROUPS = [
     { id:'anthropic/claude-3-opus', name:'Claude 3 Opus', desc:'Opus original', badge:'' },
     { id:'anthropic/claude-3-haiku', name:'Claude 3 Haiku', desc:'Ultra veloz', badge:'fast' },
   ]},
-  { label:'🔵 Google / Gemini', color:'#4285f4', models:[
+  { label:'Google', color:'#4285f4', models:[
     { id:'google/gemini-2.5-pro-preview', name:'Gemini 2.5 Pro', desc:'Líder benchmarks, 1M ctx', badge:'new' },
     { id:'google/gemini-2.5-flash-preview', name:'Gemini 2.5 Flash', desc:'Veloz e capaz', badge:'fast' },
     { id:'google/gemini-2.5-flash-preview:thinking', name:'Gemini 2.5 Flash Thinking', desc:'Com raciocínio', badge:'think' },
@@ -590,7 +587,7 @@ const MODEL_GROUPS = [
     { id:'google/gemma-3-12b-it', name:'Gemma 3 12B', desc:'Leve e eficiente', badge:'free' },
     { id:'google/gemma-3-4b-it', name:'Gemma 3 4B', desc:'Ultra compacto', badge:'free' },
   ]},
-  { label:'🟡 xAI / Grok', color:'#1da1f2', models:[
+  { label:'xAI', color:'#1da1f2', models:[
     { id:'x-ai/grok-3', name:'Grok 3', desc:'Flagship xAI', badge:'new' },
     { id:'x-ai/grok-3-mini', name:'Grok 3 Mini', desc:'Econômico e rápido', badge:'fast' },
     { id:'x-ai/grok-3-mini:thinking', name:'Grok 3 Mini Thinking', desc:'Com raciocínio', badge:'think' },
@@ -598,7 +595,7 @@ const MODEL_GROUPS = [
     { id:'x-ai/grok-2-vision-1212', name:'Grok 2 Vision', desc:'Com visão', badge:'' },
     { id:'x-ai/grok-beta', name:'Grok Beta', desc:'Experimental', badge:'' },
   ]},
-  { label:'🔴 DeepSeek', color:'#e74c3c', models:[
+  { label:'DeepSeek', color:'#e74c3c', models:[
     { id:'deepseek/deepseek-r1', name:'DeepSeek R1', desc:'Raciocínio de ponta', badge:'think' },
     { id:'deepseek/deepseek-r1:free', name:'DeepSeek R1 Free', desc:'Gratuito', badge:'free' },
     { id:'deepseek/deepseek-r1-distill-llama-70b', name:'R1 Distill Llama 70B', desc:'Distilado eficiente', badge:'think' },
@@ -607,7 +604,7 @@ const MODEL_GROUPS = [
     { id:'deepseek/deepseek-v3:free', name:'DeepSeek V3 Free', desc:'Gratuito', badge:'free' },
     { id:'deepseek/deepseek-chat', name:'DeepSeek Chat', desc:'Conversacional', badge:'' },
   ]},
-  { label:'🟤 Meta / Llama', color:'#0668E1', models:[
+  { label:'Meta', color:'#0668E1', models:[
     { id:'meta-llama/llama-4-maverick', name:'Llama 4 Maverick', desc:'Top multimodal Meta 2025', badge:'new' },
     { id:'meta-llama/llama-4-maverick:free', name:'Llama 4 Maverick Free', desc:'Gratuito', badge:'free' },
     { id:'meta-llama/llama-4-scout', name:'Llama 4 Scout', desc:'10M ctx multimodal', badge:'new' },
@@ -617,7 +614,7 @@ const MODEL_GROUPS = [
     { id:'meta-llama/llama-3.1-405b-instruct', name:'Llama 3.1 405B', desc:'Maior modelo Meta', badge:'' },
     { id:'meta-llama/llama-3.1-8b-instruct:free', name:'Llama 3.1 8B Free', desc:'Leve e gratuito', badge:'free' },
   ]},
-  { label:'🟣 Alibaba / Qwen', color:'#ff6a00', models:[
+  { label:'Alibaba', color:'#ff6a00', models:[
     { id:'qwen/qwen3-235b-a22b', name:'Qwen3 235B MoE', desc:'Flagship com thinking', badge:'think' },
     { id:'qwen/qwen3-235b-a22b:free', name:'Qwen3 235B Free', desc:'Gratuito', badge:'free' },
     { id:'qwen/qwen3-30b-a3b', name:'Qwen3 30B MoE', desc:'MoE eficiente', badge:'fast' },
@@ -630,7 +627,7 @@ const MODEL_GROUPS = [
     { id:'qwen/qwen-2.5-72b-instruct', name:'Qwen 2.5 72B', desc:'Multilingual avançado', badge:'' },
     { id:'qwen/qwen-2.5-coder-32b-instruct', name:'Qwen 2.5 Coder 32B', desc:'Especializado código', badge:'' },
   ]},
-  { label:'⚪ Mistral / Mixtral', color:'#ff7000', models:[
+  { label:'Mistral', color:'#ff7000', models:[
     { id:'mistralai/mistral-large-2411', name:'Mistral Large 2411', desc:'Flagship Mistral', badge:'' },
     { id:'mistralai/mistral-medium-3', name:'Mistral Medium 3', desc:'Balanceado', badge:'new' },
     { id:'mistralai/mistral-small-3.1-24b-instruct', name:'Mistral Small 3.1', desc:'Eficiente multilingual', badge:'free' },
@@ -641,30 +638,30 @@ const MODEL_GROUPS = [
     { id:'mistralai/devstral-small', name:'Devstral Small', desc:'Agente de código', badge:'free' },
     { id:'mistralai/pixtral-large-2411', name:'Pixtral Large', desc:'Multimodal Mistral', badge:'' },
   ]},
-  { label:'🌙 Moonshot / Kimi', color:'#6c5ecf', models:[
+  { label:'Moonshot', color:'#6c5ecf', models:[
     { id:'moonshotai/kimi-k2', name:'Kimi K2', desc:'1T params open-source agentic', badge:'new' },
     { id:'moonshotai/kimi-k2:free', name:'Kimi K2 Free', desc:'Gratuito', badge:'free' },
     { id:'moonshotai/kimi-vl-a3b-thinking', name:'Kimi VL Thinking', desc:'Vision + reasoning', badge:'think' },
     { id:'moonshotai/moonlight-16b-a3b-instruct', name:'Moonlight 16B', desc:'Eficiente MoE', badge:'free' },
   ]},
-  { label:'🐉 Tencent / Hunyuan (Hy3)', color:'#00b4d8', models:[
+  { label:'Tencent (Hy3)', color:'#00b4d8', models:[
     { id:'tencent/hunyuan-a13b-instruct', name:'Hunyuan A13B', desc:'MoE Tencent eficiente', badge:'new' },
     { id:'tencent/hunyuan-a13b-instruct:free', name:'Hunyuan A13B Free', desc:'Gratuito', badge:'free' },
     { id:'tencent/hunyuan-t1', name:'Hunyuan T1', desc:'Thinking model', badge:'think' },
   ]},
-  { label:'🟦 Baidu / ERNIE', color:'#2932e1', models:[
+  { label:'Baidu', color:'#2932e1', models:[
     { id:'baidu/ernie-4.5-300b-a47b', name:'ERNIE 4.5 300B', desc:'Flagship MoE Baidu', badge:'new' },
     { id:'baidu/ernie-4.5-21b-a3b', name:'ERNIE 4.5 21B', desc:'Econômico', badge:'free' },
     { id:'baidu/ernie-4.5-21b-a3b:thinking', name:'ERNIE 4.5 Thinking', desc:'Com raciocínio', badge:'think' },
     { id:'baidu/ernie-4.5-vl-28b-a3b', name:'ERNIE 4.5 VL 28B', desc:'Vision-language', badge:'' },
   ]},
-  { label:'🟩 NVIDIA / Nemotron', color:'#76b900', models:[
+  { label:'NVIDIA', color:'#76b900', models:[
     { id:'nvidia/llama-3.1-nemotron-ultra-253b-v1', name:'Nemotron Ultra 253B', desc:'Flagship NVIDIA reasoning', badge:'think' },
     { id:'nvidia/llama-3.1-nemotron-ultra-253b-v1:free', name:'Nemotron Ultra Free', desc:'Gratuito', badge:'free' },
     { id:'nvidia/llama-3.3-nemotron-super-49b-v1', name:'Nemotron Super 49B', desc:'Open-weight NVIDIA', badge:'free' },
     { id:'nvidia/llama-3.1-nemotron-70b-instruct', name:'Nemotron 70B', desc:'NVIDIA otimizado', badge:'' },
   ]},
-  { label:'🔷 Microsoft / Phi', color:'#00a4ef', models:[
+  { label:'Microsoft', color:'#00a4ef', models:[
     { id:'microsoft/phi-4', name:'Phi-4', desc:'SLM avançado Microsoft', badge:'' },
     { id:'microsoft/phi-4-reasoning', name:'Phi-4 Reasoning', desc:'Com raciocínio', badge:'think' },
     { id:'microsoft/phi-4-reasoning-plus', name:'Phi-4 Reasoning+', desc:'Raciocínio máximo', badge:'think' },
@@ -672,44 +669,44 @@ const MODEL_GROUPS = [
     { id:'microsoft/wizardlm-2-8x22b', name:'WizardLM 2 8x22B', desc:'MoE poderoso', badge:'' },
     { id:'microsoft/mai-ds-r1', name:'MAI DS R1', desc:'Microsoft + DeepSeek', badge:'think' },
   ]},
-  { label:'🎯 Perplexity / Sonar', color:'#20808d', models:[
+  { label:'Perplexity', color:'#20808d', models:[
     { id:'perplexity/sonar-pro', name:'Sonar Pro', desc:'Busca web profissional', badge:'' },
     { id:'perplexity/sonar', name:'Sonar', desc:'Busca web rápida', badge:'fast' },
     { id:'perplexity/sonar-reasoning-pro', name:'Sonar Reasoning Pro', desc:'Raciocínio + busca', badge:'think' },
     { id:'perplexity/sonar-deep-research', name:'Sonar Deep Research', desc:'Pesquisa profunda', badge:'think' },
     { id:'perplexity/r1-1776', name:'R1-1776', desc:'DeepSeek sem censura', badge:'' },
   ]},
-  { label:'🔶 Amazon / Nova', color:'#ff9900', models:[
+  { label:'Amazon', color:'#ff9900', models:[
     { id:'amazon/nova-pro-v1', name:'Nova Pro', desc:'Alto desempenho Amazon', badge:'' },
     { id:'amazon/nova-lite-v1', name:'Nova Lite', desc:'Econômico e rápido', badge:'fast' },
     { id:'amazon/nova-micro-v1', name:'Nova Micro', desc:'Ultra leve', badge:'fast' },
   ]},
-  { label:'⚡ ByteDance / Seed', color:'#fe2c55', models:[
+  { label:'ByteDance', color:'#fe2c55', models:[
     { id:'bytedance-seed/seed-1.6', name:'Seed 1.6', desc:'Flagship ByteDance 2025', badge:'new' },
     { id:'bytedance-seed/seed-1.6:free', name:'Seed 1.6 Free', desc:'Gratuito', badge:'free' },
     { id:'bytedance-seed/seed-1.6-flash', name:'Seed 1.6 Flash', desc:'Versão rápida', badge:'fast' },
     { id:'bytedance-seed/seed-1.6-thinking', name:'Seed 1.6 Thinking', desc:'Com raciocínio', badge:'think' },
   ]},
-  { label:'🧠 Arcee / Trinity', color:'#9c27b0', models:[
+  { label:'Arcee', color:'#9c27b0', models:[
     { id:'arcee-ai/arcee-blitz', name:'Arcee Blitz', desc:'Ultra velocidade', badge:'fast' },
     { id:'arcee-ai/maestro-reasoning', name:'Maestro Reasoning', desc:'Raciocínio Arcee', badge:'think' },
     { id:'arcee-ai/virtuoso-large', name:'Virtuoso Large', desc:'Modelo premium', badge:'' },
     { id:'arcee-ai/virtuoso-medium-v2', name:'Virtuoso Medium V2', desc:'Balanceado', badge:'' },
   ]},
-  { label:'🌐 Cohere / Command', color:'#39594d', models:[
+  { label:'Cohere', color:'#39594d', models:[
     { id:'cohere/command-r-plus-08-2024', name:'Command R+', desc:'Multilingual avançado', badge:'' },
     { id:'cohere/command-r7b-12-2024', name:'Command R7B', desc:'Eficiente e rápido', badge:'fast' },
     { id:'cohere/command-a-03-2025', name:'Command-A', desc:'Agente de produção', badge:'new' },
   ]},
-  { label:'🔹 MiniMax', color:'#1890ff', models:[
+  { label:'MiniMax', color:'#1890ff', models:[
     { id:'minimax/minimax-01', name:'MiniMax-01', desc:'1M ctx poderoso', badge:'' },
     { id:'minimax/minimax-m1', name:'MiniMax M1', desc:'Agente produção', badge:'new' },
   ]},
-  { label:'🧩 Zhipu / GLM', color:'#1677ff', models:[
+  { label:'Zhipu', color:'#1677ff', models:[
     { id:'z-ai/glm-4-32b', name:'GLM-4 32B', desc:'Zhipu AI avançado', badge:'' },
     { id:'z-ai/glm-4-flash', name:'GLM-4 Flash', desc:'Ultra rápido', badge:'fast' },
   ]},
-  { label:'🔑 Outros Notáveis', color:'#607d8b', models:[
+  { label:'Outros Notáveis', color:'#607d8b', models:[
     { id:'ai21/jamba-1-5-large', name:'Jamba 1.5 Large', desc:'SSM+Transformer AI21', badge:'' },
     { id:'allenai/olmo-2-0325-32b-instruct', name:'OLMo 2 32B', desc:'AllenAI open research', badge:'free' },
     { id:'nousresearch/hermes-3-llama-3.1-405b', name:'Hermes 3 405B', desc:'Nous Research', badge:'' },
